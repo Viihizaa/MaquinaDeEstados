@@ -1,10 +1,10 @@
 9
 abb
 ababb
-bbabb
-bababb
+cbabb
+abbabb
 ababababb
 abababab
-bbabbabba
+dbabbabba
 abcd
-bdjs
+djs
