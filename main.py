@@ -4,14 +4,12 @@ def estado1(texto):
   alfabeto = ['a', 'b', 'c']
   tamanho = len(texto)
   for i in range(0,tamanho):
-    i = 0
     letra = texto[i]
     #Se não pertence ao alfabeto encerra
     if letra not in alfabeto:
       return False
     #Se pertence segue para estado 2
     else:
-      i+=1
       return estado2(letra)
   return retorno
   
@@ -52,15 +50,12 @@ def estado4(letra):
   tamanho = len(texto)
   for i in range(0,tamanho):
     letra = texto[i]
-    if i == tamanho-1:
-      return False
-    else:
     #Se for b segue para estado 5
-      if letra == 'b':
-        return estado5(letra)
+    if letra == 'b':
+      return estado5(letra)
     #Se for a encerra
-      else:
-        return False
+    else:
+      return False
   return retorno
 
 #Estado 5: confere segundo b
@@ -69,15 +64,12 @@ def estado5(letra):
   tamanho = len(texto)
   for i in range(0,tamanho):
     letra = texto[i]
-    if i == tamanho-1:
-      #Se for b segue para estado 6
-      if letra == 'b':
-        return True
-      else:
-        return False
+    #Se for b segue para estado 6
+    if letra == 'b':
+      return estado6(letra)
     #Se for a encerra
     else:
-      return estado6(letra)
+      return False
   return retorno
 
 #Estado 6: confere depois da sequecia do a
@@ -90,13 +82,12 @@ def estado6(letra):
     if letra == 'b':
       return estado3(letra)
     #Se for a segue para estado 4
-    elif letra == 'a':
-      return estado4(letra)
     else:
-      return False
+      return estado4(letra)
   return retorno
     
 #Abre arquivo com open(arquivo)
+  #Para outro arquivo mudar numero do txt de acordo com demais arquivos diponibilizados
 with open('String9.txt') as arquivo:
   lista = arquivo.readlines()
   linhas = int(lista[0])
