@@ -1,0 +1,10 @@
+9
+abb
+ababb
+bbabb
+bababb
+ababababb
+abababab
+bbabbabba
+abcd
+bdjs
